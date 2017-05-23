@@ -1,0 +1,9 @@
+{ "name" : "nodejs_kaldi_train_wrapper"
+, "version" : "0.0.1"
+, "description" : "Start shell wrapper through ui"
+, "dependencies" :{
+   "ws" : "*"
+  }
+, "main" : "main.js"
+, "scripts":{"start" : "node main.js"}
+}
