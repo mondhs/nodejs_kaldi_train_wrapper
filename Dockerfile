@@ -14,7 +14,9 @@ RUN apt-get install -y curl sudo
 RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
-COPY opt /opt
+ADD assets /opt/wrapper/assets
+ADD contol_files /opt/wrapper/contol_files
+ADD main.js package.json /opt/wrapper/
 
 WORKDIR "/opt/wrapper"
 RUN npm install ws --save

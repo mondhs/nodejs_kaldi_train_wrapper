@@ -1,5 +1,10 @@
 { "name" : "nodejs_kaldi_train_wrapper"
 , "version" : "0.0.1"
+,"repository": {
+  "type": "git",
+  "url": "https://github.com/mondhs/nodejs_kaldi_train_wrapper"
+}
+,"license": "Apache-2.0"
 , "description" : "Start shell wrapper through ui"
 , "dependencies" :{
    "ws" : "*"
