@@ -156,7 +156,7 @@ function executeAndRespond(pathname, request, response){
 
 function startCmd(){
   // while sleep 1; do ls; done
-  var cmdProcess = spawn('./contol_files/run.sh');
+  var cmdProcess = spawn('./run.sh', {cwd: './contol_files/'});
   g_satusObj.bufferOut = "";
 
   cmdProcess.stdout.on('data', (data) => {

@@ -27,16 +27,15 @@ $(document).ready(function() {
    });
    return false;
  });
-/*
- var loc = window.location;
- var ws_server_url="ws:";
- if (loc.protocol === "https:") {
-     ws_server_url = "wss:";
- }
- */
- ws_server_url = "ws://localhost:8082/";
 
- var wss = new WebSocket(ws_server_url);
+ //var ws_server_url = "ws://localhost:8082/";
+
+ function getWsServerUrl(port) {
+    var l = window.location;
+    return ((l.protocol === "https:") ? "wss://" : "ws://") + l.hostname + ":" + port + l.pathname ;
+}
+
+ var wss = new WebSocket(getWsServerUrl(8082));
  wss.onopen = function()
  {
     // Web Socket is connected, send data using send()
